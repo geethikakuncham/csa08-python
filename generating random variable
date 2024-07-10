@@ -1,0 +1,3 @@
+import random
+random_var = random.randint(1, 99)
+print("Random variable generated:", random_var)
