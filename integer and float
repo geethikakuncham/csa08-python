@@ -1,0 +1,28 @@
+num1 = 10
+num2 = 5
+result_addition = num1 + num2
+print("Addition:", result_addition)
+result_subtraction = num1 - num2
+print("Subtraction:", result_subtraction)
+result_multiplication = num1 * num2
+print("Multiplication:", result_multiplication)
+result_integer_division = num1 // num2
+print("Integer Division:", result_integer_division)
+result_float_division = num1 / num2
+print("Float Division:", result_float_division)
+result_modulo_division = num1 % num2
+print("Modulo Division:", result_modulo_division)
+num3 = 7.5
+num4 = 2.5
+result_addition_floats = num3 + num4
+print("Addition of floats:", result_addition_floats)
+result_subtraction_floats = num3 - num4
+print("Subtraction of floats:", result_subtraction_floats)
+result_multiplication_floats = num3 * num4
+print("Multiplication of floats:", result_multiplication_floats)
+result_integer_division_floats = num3 // num4
+print("Integer Division of floats:", result_integer_division_floats)
+result_float_division_floats = num3 / num4
+print("Float Division of floats:", result_float_division_floats)
+result_modulo_division_floats = num3 % num4
+print("Modulo Division of floats:", result_modulo_division_floats)
