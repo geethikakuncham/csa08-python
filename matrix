@@ -1,0 +1,13 @@
+matrix = 
+    [4, 6, 7, 8],
+    [3, 7, 2, 7],
+    [7, 3, 7, 5]
+def transpose(matrix):
+    return [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+transposed_matrix = transpose(matrix)
+print("Original Matrix:")
+for row in matrix:
+    print(row)
+print("\nTransposed Matrix:")
+for row in transposed_matrix:
+    print(row)
