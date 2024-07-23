@@ -1,0 +1,30 @@
+def binary_to_decimal(binary):
+    decimal = 0
+    power = 0
+    while binary > 0:
+        decimal += (binary % 10) * (2 ** power)
+        binary //= 10
+        power += 1
+    return decimal
+def find_maximum_binary_value(binary1, binary2, binary3):
+    decimal1 = binary_to_decimal(binary1)
+    decimal2 = binary_to_decimal(binary2)
+    decimal3 = binary_to_decimal(binary3)
+    max_decimal = decimal1
+    if decimal2 > max_decimal:
+        max_decimal = decimal2
+    if decimal3 > max_decimal:
+        max_decimal = decimal3
+    max_binary = ""
+    if max_decimal == 0:
+        max_binary = "0"
+    else:
+        while max_decimal > 0:
+            max_binary = str(max_decimal % 2) + max_binary
+            max_decimal //= 2
+    return max_binary
+binary1 = 1011
+binary2 = 110
+binary3 = 10001
+max_binary = find_maximum_binary_value(binary1, binary2, binary3)
+print(f"The maximum binary value is: {max_binary}")
