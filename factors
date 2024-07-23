@@ -1,0 +1,28 @@
+def count_factors(n):
+    """Returns the number of factors of n."""
+    factors = [i for i in range(1, n + 1) if n % i == 0]
+    return factors
+def nth_factor(n, k):
+    """Returns the kth factor of n, if it exists."""
+    factors = count_factors(n)
+    if k <= len(factors):
+        return factors[k - 1]  # k is 1-based index
+    else:
+        return None  # Not enough factors
+def main():
+    try:
+        number = int(input("Enter a number: "))
+        if number <= 0:
+            raise ValueError("Number must be positive.")
+        factors = count_factors(number)
+        print(f"The number of factors of {number} is: {len(factors)}")
+        n = int(input(f"Enter the index of the factor you want (1-{len(factors)}): "))
+        factor = nth_factor(number, n)
+        if factor is not None:
+            print(f"The {n}th factor of {number} is: {factor}")
+        else:
+            print(f"There are not enough factors for {n}.")
+    except ValueError as e:
+        print(f"Input error: {e}")
+if __name__ == "__main__":
+    main()
