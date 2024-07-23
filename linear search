@@ -1,0 +1,17 @@
+def linear_search(input_list, target):
+    for index, element in enumerate(input_list):
+        if element == target:
+            return index  # Return the index of the target
+    return -1  
+def main():
+    user_input = input("Enter a list of elements separated by spaces: ")
+    input_list = user_input.split()
+    target = input("Enter the target element to search for: ")
+    result = linear_search(input_list, target)
+    if result != -1:
+        print(f"Element '{target}' found at index: {result}")
+    else:
+        print(f"Element '{target}' is not in the list.")
+
+if __name__ == "__main__":
+    main()
